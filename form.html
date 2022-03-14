@@ -38,19 +38,87 @@
         <p>
           <strong><u>Snake Form</u></strong>
         </p>
-        <form method="get">
-          <label for="snakecolor"
-            >What color of snake do you like most:</label
-          >
-          <input
-            type="color"
-            id="snakecolor"
-            name="snakecolor"
-            value="#2A7D34"
-          /> 
+        <!-- 
+          This form's goal is to gather input using the user's 
+          opinions and knowledge about snakes.
+        -->
+        <form method="get" name="snake-form" id="snake-form">
+          <!--
+            The field set used is a container for the input inside.
+            It contains a legend which describes the container.
+          -->
+          <fieldset form="snake-form" name="snake-color">
+            <legend>
+              What Color of Snake do You Like Most?
+            </legend>
+            <!--
+              This input defines a color and allows the user 
+              to open a small panel and choose out of near
+              endless colors what they like most as the 
+              color of a snake.
+            -->
+            <label for="snakecolor"
+              >Choose a Snake Color:</label
+            >
+            <input
+              type="color"
+              id="snakecolor"
+              name="snakecolor"
+              value="#2A7D34"
+            /> 
+          </fieldset>
+
           </br>
-          <input type="checkbox" id="snake1" name="snake" value="Ball Python">
-          <label for="snake1"> Ball Python</label><br/>
+          <fieldset form="snake-form" name="snake-type">
+            <legend>
+              Please Select Any Type of Snakes You Like.
+            </legend>
+            <!--
+              This area of input is made of clickable checkboxes 
+              and allows the user to choose which snakes they
+              like of five unique options. More than one input 
+              can be selected at a time.
+            -->
+            <input type="checkbox" id="snake1" name="snake" value="Corn Snake">
+            <label for="snake1"> Corn Snake</label><br/>
+            <input type="checkbox" id="snake2" name="snake" value="Boa Constrictor">
+            <label for="snake2"> Boa Constrictor</label><br/>
+            <input type="checkbox" id="snake3" name="snake" value="Riticulated Python">
+            <label for="snake3"> Riticulated Python</label><br/>
+            <input type="checkbox" id="snake4" name="snake" value="Black Mamba">
+            <label for="snake4"> Black Mamba</label><br/>
+            <input type="checkbox" id="snake5" name="snake" value="King Cobra">
+            <label for="snake5"> King Cobra</label><br/>
+          </fieldset>
+
+          <fieldset form="snake-form" name="snake-text">
+            <legend>
+              What Other Snake Species Do You Know that were not Mentioned?
+            </legend>
+            <!--
+            This area of input is a text box which allows a
+            user to enter unique text between 2 and 30 characters
+            long. This particular text input is being used to 
+            have the user enter a species of snake they know.
+            -->
+            <label for="snake-name">Type a snake species here: </label>
+            <input type="text" id="snake-name" name="snake-name" minlength="2" maxlength="30"><br/>
+          </fieldset>
+
+          <fieldset form="snake-form" name="snake-options-menu">
+            <legend>
+              Submit or Reset Your Entries Here!
+            </legend>
+            <!--
+              This are of input defines and submit and reset button.
+              The reset button allows the user to quickly undo 
+              mistakes and the submit button submits all of the 
+              users current form inputs.
+            -->
+            <input type="reset" value="Reset Snake Form"><br/><br/>
+            <input type="submit" value="Submit Snake Form">
+          </fieldset>
+
         </form>
       </main>
     </center>
